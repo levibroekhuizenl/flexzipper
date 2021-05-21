@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 21 mei 2021 om 08:21
+-- Gegenereerd op: 21 mei 2021 om 12:42
 -- Serverversie: 5.7.31
 -- PHP-versie: 7.3.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `flex-zipper`
+-- Database: `flexzipper`
 --
 
 -- --------------------------------------------------------
@@ -44,13 +44,22 @@ DROP TABLE IF EXISTS `services`;
 CREATE TABLE IF NOT EXISTS `services` (
   `service_id` int(11) NOT NULL AUTO_INCREMENT,
   `service_name` varchar(255) NOT NULL,
-  `service_genre` int(11) NOT NULL,
-  `service_status` int(11) NOT NULL,
+  `service_genre` varchar(255) NOT NULL,
+  `service_status` varchar(255) NOT NULL,
   `service_details` varchar(255) NOT NULL,
   PRIMARY KEY (`service_id`),
   KEY `genre_has_1` (`service_genre`) USING BTREE,
   KEY `status_has_1` (`service_status`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `services`
+--
+
+INSERT INTO `services` (`service_id`, `service_name`, `service_genre`, `service_status`, `service_details`) VALUES
+(3, 'Autobanden pompen', 'Autos', 'Beschikbaar', 'Ik heb hulp nodig met mijn banden op te pompen van mijn prachtige auto. Ik ben altijd bereikbaar.'),
+(4, 'Website maken', 'ICT', 'In behandeling', 'Ik zou graag een website willen voor mij knuffelbeer collectie.'),
+(5, 'Hypotheek advies', 'Economie', 'Beschikbaar', 'Ik zou graag een hypotheek advies willen krijgen omdat ik wil weten hoeveel ik kan lenen. Ik heb zelf diensten te bieden hiervoor.');
 
 -- --------------------------------------------------------
 
