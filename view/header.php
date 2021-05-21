@@ -11,21 +11,20 @@
   <link rel='stylesheet' href='assets/style.css'>
 </head>
 <body>
-<div class="header">
-  <form method='post' id='theform' name='handleData'>
-  <ul>
-      <li id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=createform', sendToContent);"><a>Create</a></li>
-      <li type='button' name='todo' value='read' onClick="loadPage('controller/productsController.php?todo=read', sendToContent);"><a>Read</a></li>
+<div class="header">  
+  <ul class="sidenav">
+ <form method='post' id='theform' name='handleData'>
+        <div class="row">
+                <li id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=createform', sendToContent);"><a>Create</a></li>
+                <li type='button' name='todo' value='read' onClick="loadPage('controller/productsController.php?todo=read', sendToContent);"><a>Read</a></li>
+                <li><input type='text' name='search' placeholder='search...'></li>
+                <li type='button' name='todo' value='search' onClick="loadPage('controller/productsController.php?todo=search', sendToContent);"><a>Search</a></li>
+            </div>
+            <div id='content'>
+            </div>
+            </div>
+        </form>
 
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
-</ul>
-</form>
+  </ul>
 </body>
 </html>

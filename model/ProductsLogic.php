@@ -63,6 +63,17 @@
             } catch (Exception $e) { throw $e; }
         }
 
+        public function searchProduct($res){ 
+            try { 
+                $sql = "SELECT * FROM services WHERE service_name LIKE '$res%'";
+                $res = $this->DataHandler->readsData($sql);
+                $results = $res->fetchAll();
+                $outputdata = new OutputData();
+                echo $outputdata->createTable($results);
+                // return$results;
+            } catch (Exception $e) { throw $e; }
+    }
+
         function __destruct() {
             $this->conn = null;
         }

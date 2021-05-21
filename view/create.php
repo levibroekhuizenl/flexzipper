@@ -11,13 +11,13 @@
 		<div class="row blue center">
   <div class="col-9">
     <h1 class='left'>Diensten</h1>
- <form action='controller/productsController.php' method='post' id='theform' name='handleData'>
+  <form action='../controller/productsController.php' method='post' id='theform' name='handleData'>
 <div class="row">
             <div class="col-3 col-s-12">
                 <label for="">Naam van dienst</label>
             </div>
             <div class="col-9 col-s-12">
-                <input id="fname" type="text" name='service_name' value='naam' required autofocus>
+                <input type="text" name='service_name' value='naam' required autofocus>
             </div>
         </div>
 
@@ -42,7 +42,8 @@
                 <label for="">Details</label>
             </div>
             <div class="col-9 col-s-12">
-                <textarea id="subject" type="text" name='service_details' value='details' required autofocus style='height: 200px;'></textarea>
+<textarea id="mytextarea" name="service_details">other_product_details</textarea>
+    
             </div>
         </div>       
         <div class="row">
@@ -70,7 +71,6 @@ if(isset($product)){
 
   function loadPage(href, callback) {
     tinyMCE.triggerSave();
-    document.getElementById('spinner').style.display = 'block';
     var form = document.getElementById('theform');
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest(); // Usual mix-and-matching for x-browser omitted for brevity

@@ -44,6 +44,10 @@ class ProductsController {
                         $this->collectReadProduct($id);
                         include '../view/update.php';
                         break;
+                    case 'search':
+                        $res = $_REQUEST['search'];
+                        $this->collectSearchProduct($res);
+                        break;
                     case 'delete':
                         echo 'test';
                         $this->collectDeleteProduct($_REQUEST['id']);
@@ -81,6 +85,10 @@ class ProductsController {
 
         function collectDeleteProduct($id) {
             $products = $this->ProductsLogic->deleteProduct($id);
+        }
+
+        function collectSearchProduct($res) {
+            $products = $this->ProductsLogic->searchProduct($res);
         }
 
         function __destruct() {

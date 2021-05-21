@@ -12,12 +12,19 @@
   <link rel='stylesheet' href='view/assets/style.css'>
 </head>
 <body>
-<?php
-  include 'view/header.php';
-?>
-<div class='col-12'>
-  <div id='content'></div>
+  <?php include 'view/header.php' ?>
+
+<div class="row">
+  <p class='test'>
+    
+  </p>
+
+  <div class="col-12">
+    <div id='content'></div>
 </div>
+</div>
+</div>
+
 </body>
 </html>
 <script>
