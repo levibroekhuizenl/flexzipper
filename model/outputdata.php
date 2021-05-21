@@ -26,6 +26,7 @@ class OutputData {
             			foreach($row as $columns) {
             				$html .= "<td>" . $columns . "</td>";
             			}
+                        $html .= "<td>" . '<button><a id="button-td" href="view/details.php?id=' . $row['service_id'] . '">' . 'Read' . '</a></button' . "</td>";
                         $html .= "<td>" . '<button><a href="controller/productsController.php?todo=delete&id=' .$row['service_id'] . '">' . 'Delete' . '</button' . "</td>";
                         $html .= "<td>" . '<button><a id="button-td" href="view/update.php?service_id=' . $row['service_id'] . '&service_name='. $row['service_name'] .'&service_genre='. $row['service_genre'] .'&service_status='. $row['service_status'] .'&service_details='. $row['service_details'] . '">' . 'Update' . '</a></button>' . "</td>";
             		$html .= '</tr>';
@@ -36,6 +37,7 @@ class OutputData {
     }
 
     function createTable2($rows) {
+        if (!empty($rows)) {
         $html = '<table border="1">';
             $html .= '<tr>';
                 foreach($rows[0] as $key => $value){
@@ -47,6 +49,7 @@ class OutputData {
                         foreach($row as $columns) {
                             $html .= "<td>" . $columns . "</td>";
                         }
+                        $html .= "<td>" . '<button><a id="button-td" href="../controller/ProductsController.php?todo=read&id=' . $row['service_id'] . '">' . 'Read' . '</a></button' . "</td>";
                         $html .= "<td>" . '<button><a href="controller/productsController.php?todo=delete&id=' .$row['id'] . '">' . 'Delete' . '</button' . "</td>";
                         $html .= "<td>" . '<button><a href="controller/productsController.php?todo=updateform&id=' .$row['id'] . '">' . 'Update' . '</a></button' . "</td>";
                     $html .= '</tr>';
@@ -54,6 +57,9 @@ class OutputData {
         $html .= '</table>';
 
         return $html;
+        } else {
+            return "Geen gegevens gevonden.";
+        }
     }
 
 

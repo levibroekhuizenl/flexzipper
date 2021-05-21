@@ -22,15 +22,23 @@
             } catch (Exception $e) { throw $e; }
         }
 
-        function readProduct($id) {
-            try { 
-                $sql = 'SELECT * FROM services WHERE product_id="$id" ';
-                $res = $this->DataHandler->readsData($sql);
-                $results = $res->fetchAll();
-                $outputdata = new OutputData();
-         return $outputdata->createTable2($results);
-                // return$results;
-            } catch (Exception $e) { throw $e; }
+        // function readProduct($id) {
+        //     try { 
+        //         $sql = 'SELECT * FROM services WHERE service_id="$id" ';
+        //         $res = $this->DataHandler->readsData($sql);
+        //         $results = $res->fetchAll();
+        //         $outputdata = new OutputData();
+        //         return $outputdata->createTable2($results);
+        //         // return$results;
+        //     } catch (Exception $e) { throw $e; }
+        // }
+
+        function readProduct($sql){
+        
+            $stmt = $this->DataHandler->readData($sql);
+    
+            $product = $stmt->fetchAll();
+            return $product;
         }
 
         public function readAllProducts(){ 

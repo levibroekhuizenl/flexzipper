@@ -34,7 +34,7 @@ class DataHandler{
     }
 
     public function readData($sql){
-        return $this->query($sql);
+        return $this->dbh->query($sql,PDO::FETCH_ASSOC);
         // return $this->dbh->query($sql,PDO::FETCH_ASSOC);
     }
     public function readsData($sql){
