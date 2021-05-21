@@ -12,30 +12,12 @@
   <link rel='stylesheet' href='view/assets/style.css'>
 </head>
 <body>
-
-<img id='spinner' src='spinner.gif'>
-
-<div class="row">
-
-  <p class='test'>
-    
-  </p>
-
-  <div class="col-9">
- <form method='post' id='theform' name='handleData' style="background-color: lightgray;">
-        <div class="row">
-            <div class="col-6 col-s-12">
-                <button id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=createform', sendToContent);">Create</button>
-                <button type='button' name='todo' value='read' onClick="loadPage('controller/productsController.php?todo=read', sendToContent);">Read</button>
-            </div>
-            <div id='content'>
-            </div>
-            </div>
-        </form>
+<?php
+  include 'view/header.php';
+?>
+<div class='col-12'>
+  <div id='content'></div>
 </div>
-</div>
-</div>
-
 </body>
 </html>
 <script>
@@ -44,7 +26,6 @@
 
   function loadPage(href, callback) {
     tinyMCE.triggerSave();
-    document.getElementById('spinner').style.display = 'block';
     var form = document.getElementById('theform');
     var formData = new FormData(form);
     var xhr = new XMLHttpRequest(); // Usual mix-and-matching for x-browser omitted for brevity
@@ -52,7 +33,6 @@
         // readyState 4 means the request is done, If the HTTP request has completed
         // status 200 is a successful return, If the HTTP response code is 200 (e.g. successful)
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById('spinner').style.display = 'none';
             callback(this); // Retrieve the response text
         }
         // An error occurred during the request.

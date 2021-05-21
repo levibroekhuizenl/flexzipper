@@ -46,7 +46,7 @@
 
         public function deleteProduct($id){ 
             try { 
-                $sql = "DELETE FROM products WHERE product_id='$id' ";
+                $sql = "DELETE FROM services WHERE service_id='$id' ";
                 $res = $this->DataHandler->deleteData($sql);
                 return "verwijderd";
                 // return$results;

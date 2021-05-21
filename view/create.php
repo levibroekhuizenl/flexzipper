@@ -8,15 +8,16 @@
 	</head>
 
 	<body>
-		<div class="row">
+		<div class="row blue center">
   <div class="col-9">
- <form action='controller/productsController.php' method='post' id='theform' name='handleData' style="background-color: lightgray;">
+    <h1 class='left'>Diensten</h1>
+ <form action='controller/productsController.php' method='post' id='theform' name='handleData'>
 <div class="row">
             <div class="col-3 col-s-12">
                 <label for="">Naam van dienst</label>
             </div>
             <div class="col-9 col-s-12">
-                <input type="text" name='service_name' value='naam' required autofocus>
+                <input id="fname" type="text" name='service_name' value='naam' required autofocus>
             </div>
         </div>
 
@@ -25,7 +26,7 @@
                 <label for="">Genre</label>
             </div>
             <div class="col-9 col-s-12">
-                <input type="number" name='service_genre' value='genre' required autofocus>
+                <input type="text" name='service_genre' value='genre' required autofocus>
             </div>
         </div>
         <div class="row">
@@ -41,7 +42,7 @@
                 <label for="">Details</label>
             </div>
             <div class="col-9 col-s-12">
-                <input type="text" name='service_details' value='details' required autofocus>
+                <textarea id="subject" type="text" name='service_details' value='details' required autofocus style='height: 200px;'></textarea>
             </div>
         </div>       
         <div class="row">

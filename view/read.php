@@ -1,3 +1,5 @@
+
+<div class='blue'>
 <?php
 if(isset($products)){
 	echo ($products);
@@ -5,3 +7,4 @@ if(isset($products)){
 	
 }
 ?>
+</div>
