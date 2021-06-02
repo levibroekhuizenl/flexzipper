@@ -137,7 +137,6 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 20px;
 }
 
@@ -165,90 +164,88 @@ input[type=submit]:hover {
   margin: auto;
 }
 
-<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);
 
 .contact {
   display: grid;
   background: #90ba10;
   font-family: "Source Sans Pro", sans-serif;
+}
+h2 {
+  grid-column: 1/3;
+  background: #3a3a3a;
+  color: white;
+  margin: 0;
+  font-size: 1.2em;
+}
+span {
+  display: inline-block;
+  padding: 10px;
+}
   
-  h2 {
-    grid-column: 1/3;
-    background: #3a3a3a;
-    color: white;
-    margin: 0;
-    font-size: 1.2em;
-    span {
-      display: inline-block;
-      padding: 10px;
-    }
-  }
-  
-  label {
-    grid-column: 1/3;
-    background: #627f09;
-    color: white;
-    padding: 5px 10px 5px 10px;
-    font-size: 1em;
-    margin: 10px 10px 0 10px;
+label {
+  grid-column: 1/3;
+  background: #627f09;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: 1em;
+  margin: 10px 10px 0 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  grid-column: 1/3;
+  font-family: "Source Sans Pro", sans-serif;
+  border: 2px solid #627f09;
+  margin: 0 10px 0px 10px;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 0.2em;
+}
+
+textarea {
+  margin-bottom: 10px;
+  min-height: 80px;
+}
+
+input[type="submit"] {
+  background: #627f09;
+  color: white;
+  border: 0;
+  border-bottom: 3px solid #4d6507;
+  border-radius: 0.5em;
+  font-size: 1.1em;
+  padding: 5px 30px 5px 30px;
+  justify-self: start;
+  align-self: start;
+  margin: 0 10px 10px 10px;
+  grid-row: 11 / 12;
+}
+  &:hover,
+  &:active {
+    position: relative;
+    top: 2px;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    grid-column: 1/3;
-    font-family: "Source Sans Pro", sans-serif;
-    border: 2px solid #627f09;
-    margin: 0 10px 0px 10px;
-    font-weight: 400;
-    font-size: 1em;
-    padding: 0.2em;
-  }
+p {
+  grid-column: 1/3;
+  background: #445706;
+  margin: 0 10px 10px 10px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-size: 0.85em;
+}
+a {
+  color: yellow;
+}
 
-  textarea {
-    margin-bottom: 10px;
-    min-height: 80px;
-  }
-
-  input[type="submit"] {
-    background: #627f09;
-    color: white;
-    border: 0;
-    border-bottom: 3px solid #4d6507;
-    border-radius: 0.5em;
-    font-size: 1.1em;
-    padding: 5px 30px 5px 30px;
-    justify-self: start;
-    align-self: start;
-    margin: 0 10px 10px 10px;
-    grid-row: 11 / 12;
-    &:hover,
-    &:active {
-      position: relative;
-      top: 2px;
-    }
-  }
-
-  p {
-    grid-column: 1/3;
-    background: #445706;
-    margin: 0 10px 10px 10px;
-    padding: 5px 10px 5px 10px;
-    color: white;
-    font-size: 0.85em;
-    a {
-      color: yellow;
-    }
-  }
-
-  picture {
-    justify-self: end;
-    grid-row: 11 / 12;
-    order: 12;
-    margin: 0 10px 10px 10px;
-  }
+picture {
+  justify-self: end;
+  grid-row: 11 / 12;
+  order: 12;
+  margin: 0 10px 10px 10px;
 }
 
 @media only screen and (min-width: 568px) {
@@ -257,59 +254,60 @@ input[type=submit]:hover {
     grid-template-rows: repeat(10, auto);
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
-    h2 {
-      background: white;
-      grid-column: 1 / 13;
-      span {
-        background: #3a3a3a;
-        padding: 10px 10px 10px 10px;
-        display: inline-block;
-        min-width: calc(50% - 20px);
-        text-align: center;
-      }
-    }
-
-    label {
-      grid-column: 1 / 5;
-      margin: 0;
-      margin-left: 10px;
-      text-align: right;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="submit"],
-    textarea {
-      grid-column: 5 / 13;
-      margin: 0;
-      margin-right: 10px;
-    }
-
-    textarea {
-      grid-row: 5 / 9;
-    }
-
-    p {
-      grid-column: 5 / 13;
-      margin: 0;
-      margin-right: 10px;
-    }
-
-    picture {
-      grid-row: 6 / 10;
-      grid-column: 1 / 5;
-      order: 10;
-      margin: 0;
-    }
-
-    input[type="submit"] {
-      grid-column: 5/13;
-      grid-row: 10/11;
-      margin-bottom: 10px;
-    }
   }
-=======
+  h2 {
+    background: white;
+    grid-column: 1 / 13;
+  }
+  span {
+    background: #3a3a3a;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    min-width: calc(50% - 20px);
+    text-align: center;
+  }
+
+  label {
+    grid-column: 1 / 5;
+    margin: 0;
+    margin-left: 10px;
+    text-align: right;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="submit"],
+  textarea {
+    grid-column: 5 / 13;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  textarea {
+    grid-row: 5 / 9;
+  }
+
+  p {
+    grid-column: 5 / 13;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  picture {
+    grid-row: 6 / 10;
+    grid-column: 1 / 5;
+    order: 10;
+    margin: 0;
+  }
+
+  input[type="submit"] {
+    grid-column: 5/13;
+    grid-row: 10/11;
+    margin-bottom: 10px;
+  }
+}
+
 #loading{
   position:fixed;
   top:0;
@@ -325,10 +323,7 @@ input[type=submit]:hover {
 #loading.hidden{
   opacity: 0;
   visibility: hidden;
->>>>>>> 5c663e5e8b054f06820c5295e1341c0c285defcd
 }
-
-
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {

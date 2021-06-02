@@ -2,9 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src='https://cdn.tiny.cloud/1/asg9lk3fby0j8myh4uii4vob7tgxmzczxy4mabkpxizd823r/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+  <script src='https://cdn.tiny.cloud/1/asg9lk3fby0j8myh4uii4vob7tgxmzczxy4mabkpxizd823r/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  </script>
   <script>
     tinymce.init({
       selector: '#mytextarea'
@@ -15,16 +14,21 @@
 <body>
   <?php include 'view/header.php' ?>
 
-<div class="row">
+
   <p class='test'></p>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col">
-        <div id="loading"><img src="img/logo.png" height="400px" width="400px"></div>
-      </div>
-    </div>
-  </div>
-</div>
+
+        <div id="loading">
+          <div class="row h-100">
+            <div class="container">
+              <div class="row h-100 justify-content-center">
+                <div class="col-4 text-center my-auto">
+                  <img src="img/logo.png" height="400px" width="400px">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
   <div class="col-12">
     <div id='content'></div>
   </div>
