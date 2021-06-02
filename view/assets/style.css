@@ -165,6 +165,7 @@ input[type=submit]:hover {
   margin: auto;
 }
 
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap);
 
 .contact {
@@ -308,6 +309,23 @@ input[type=submit]:hover {
       margin-bottom: 10px;
     }
   }
+=======
+#loading{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #00B9FF;
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+#loading.hidden{
+  opacity: 0;
+  visibility: hidden;
+>>>>>>> 5c663e5e8b054f06820c5295e1341c0c285defcd
 }
 
 
