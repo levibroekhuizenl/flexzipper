@@ -135,7 +135,7 @@ if(isset($_REQUEST['id'])){
                                 <h4 class="border-bottom pb-3">Reviews</h4>
                         <p>
                             <?php
-                                for($i=0;$i <= 6; $i++){
+                                for($i=1;$i <= 6; $i++){
                                     if(isset($productArray2[$i])){
                                         $stars = $productArray2[$i]['review_rate'];
                                         $desc = $productArray2[$i]['review_desc'];
@@ -143,7 +143,7 @@ if(isset($_REQUEST['id'])){
                                         echo $name;
                                         echo $desc . "<br>";
                                         $span = "<span class='fa fa-star checked'></span>";
-                                        for($x=0; $x <= $productArray2[$i]['review_rate']; $x++){
+                                        for($x=1; $x <= $productArray2[$i]['review_rate']; $x++){
                                                 echo $span;
                                         }
                                         echo "<br>";
