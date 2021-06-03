@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Gegenereerd op: 02 jun 2021 om 13:24
--- Serverversie: 10.4.14-MariaDB
--- PHP-versie: 7.2.33
+-- Host: 127.0.0.1:3306
+-- Gegenereerd op: 03 jun 2021 om 09:11
+-- Serverversie: 5.7.31
+-- PHP-versie: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,9 +27,11 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `genres`
 --
 
-CREATE TABLE `genres` (
+DROP TABLE IF EXISTS `genres`;
+CREATE TABLE IF NOT EXISTS `genres` (
   `genre_id` int(11) NOT NULL,
-  `genre_name` varchar(255) NOT NULL
+  `genre_name` varchar(255) NOT NULL,
+  KEY `genre_has_1` (`genre_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -38,13 +40,15 @@ CREATE TABLE `genres` (
 -- Tabelstructuur voor tabel `reviews`
 --
 
-CREATE TABLE `reviews` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `reviews`;
+CREATE TABLE IF NOT EXISTS `reviews` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `review_id` int(255) NOT NULL,
   `name` varchar(255) NOT NULL,
   `review_rate` int(255) NOT NULL,
-  `review_desc` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `review_desc` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `reviews`
@@ -62,14 +66,18 @@ INSERT INTO `reviews` (`id`, `review_id`, `name`, `review_rate`, `review_desc`) 
 -- Tabelstructuur voor tabel `services`
 --
 
-CREATE TABLE `services` (
-  `service_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `services`;
+CREATE TABLE IF NOT EXISTS `services` (
+  `service_id` int(11) NOT NULL AUTO_INCREMENT,
   `service_name` varchar(255) NOT NULL,
   `service_genre` varchar(255) NOT NULL,
   `service_status` varchar(255) NOT NULL,
   `service_details` varchar(255) NOT NULL,
-  `review_id` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `review_id` int(255) NOT NULL,
+  PRIMARY KEY (`service_id`),
+  KEY `genre_has_1` (`service_genre`) USING BTREE,
+  KEY `status_has_1` (`service_status`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `services`
@@ -110,56 +118,28 @@ INSERT INTO `services` (`service_id`, `service_name`, `service_genre`, `service_
 -- Tabelstructuur voor tabel `status`
 --
 
-CREATE TABLE `status` (
+DROP TABLE IF EXISTS `status`;
+CREATE TABLE IF NOT EXISTS `status` (
   `status_id` int(11) NOT NULL,
-  `status_name` varchar(255) NOT NULL
+  `status_name` varchar(255) NOT NULL,
+  KEY `status_has_1` (`status_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Indexen voor geëxporteerde tabellen
---
+-- --------------------------------------------------------
 
 --
--- Indexen voor tabel `genres`
---
-ALTER TABLE `genres`
-  ADD KEY `genre_has_1` (`genre_id`);
-
---
--- Indexen voor tabel `reviews`
---
-ALTER TABLE `reviews`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `services`
---
-ALTER TABLE `services`
-  ADD PRIMARY KEY (`service_id`),
-  ADD KEY `genre_has_1` (`service_genre`) USING BTREE,
-  ADD KEY `status_has_1` (`service_status`);
-
---
--- Indexen voor tabel `status`
---
-ALTER TABLE `status`
-  ADD KEY `status_has_1` (`status_id`);
-
---
--- AUTO_INCREMENT voor geëxporteerde tabellen
+-- Tabelstructuur voor tabel `users`
 --
 
---
--- AUTO_INCREMENT voor een tabel `reviews`
---
-ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-
---
--- AUTO_INCREMENT voor een tabel `services`
---
-ALTER TABLE `services`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `schoolNumber` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
