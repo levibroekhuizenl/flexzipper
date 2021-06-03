@@ -223,11 +223,11 @@ input[type="submit"] {
   margin: 0 10px 10px 10px;
   grid-row: 11 / 12;
 }
-  &:hover,
+  /* &:hover,
   &:active {
     position: relative;
     top: 2px;
-  }
+  } */
 
 p {
   grid-column: 1/3;
