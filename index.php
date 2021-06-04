@@ -9,7 +9,7 @@
       selector: '#mytextarea'
     });
   </script>
-  <link rel='stylesheet' href='view/assets/style.css'>
+  <link rel='stylesheet' href='view/assets/index.css'>
 </head>
 <body>
   <?php include 'view/header.php' ?>
@@ -17,9 +17,9 @@
 
   <p class='test'></p>
 
-  <div class="col-12">
-    <div id='content'></div>
-  </div>
+<?php include 'view/loading.php'; ?>
+<div id='content'>
+</div>
   
 
 </body>
