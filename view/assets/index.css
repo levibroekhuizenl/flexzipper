@@ -1,0 +1,32 @@
+:root {
+  --bg: #00B9FF;
+  --alinea-bg: #ffffff; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: verdana;
+  background-color: var(--bg);
+  color: white;
+}
+
+#loading{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color: #00B9FF;
+  color: white;
+  opacity: 1;
+  transition: 0.5s;
+  visibility: visible;
+}
+#loading.hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
