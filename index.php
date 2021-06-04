@@ -17,21 +17,10 @@
 
   <p class='test'></p>
 
-        <div id="loading">
-          <div class="row h-100">
-            <div class="container">
-              <div class="row h-100 justify-content-center">
-                <div class="col-4 text-center my-auto">
-                  <img src="img/logo.png" height="400px" width="400px">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
   <div class="col-12">
     <div id='content'></div>
   </div>
+  
 
 </body>
 </html>
@@ -62,12 +51,6 @@ function sendToContent(result){
     // return document.getElementById("content").innerHTML = result;
     return document.getElementById("content").innerHTML = result.response;
 }
-
-setTimeout(function() {
-  var element = document.getElementById('loading');
-  element.classList += " hidden";
-}, 3000);
-
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

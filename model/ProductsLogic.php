@@ -73,7 +73,7 @@
 
         public function searchProduct($res){ 
             try { 
-                $sql = "SELECT * FROM services WHERE service_name LIKE '$res%'";
+                $sql = "SELECT * FROM services WHERE service_name LIKE '%$res%'";
                 $res = $this->DataHandler->readsData($sql);
                 $results = $res->fetchAll();
                 $outputdata = new OutputData();
