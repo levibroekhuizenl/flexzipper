@@ -1,13 +1,13 @@
 <?php 
 require "../../model/userHandler.php";
 
-if(filter_var($_REQUEST['schoolnumber'], FILTER_VALIDATE_EMAIL)){
+if(filter_var($_REQUEST['schoolnumber'])){
     if(isset($_REQUEST['schoolnumber'])){
         $schoolnumber = $_REQUEST['schoolnumber'];
         $user = new userHandler;
         if(isset($_REQUEST['password'])){
             $password = $_REQUEST['password'];   
-            $sql = "SELECT * FROM `users` WHERE `schoolNumber`= ? ";
+            $sql = "SELECT * FROM `users` WHERE `schoolnumber`= ? ";
             $userData = $user->readUser($sql, $schoolnumber);
             if (!empty($userData)) {
                 
@@ -16,9 +16,9 @@ if(filter_var($_REQUEST['schoolnumber'], FILTER_VALIDATE_EMAIL)){
                     session_regenerate_id();
                    
                     $_SESSION['loggedin'] = TRUE;
-                    $_SESSION['firstname'] = $userData['firstname'];
-                    $_SESSION['schoolNumber'] = $schoolnumber;
-                    $_SESSION['id'] = $userData['id'];
+                    // $_SESSION['firstname'] = $userData['firstname'];
+                    $_SESSION['schoolnumber'] = $schoolnumber;
+                    $_SESSION['user_id'] = $userData['user_id'];
                     echo 'Welcome ' . $_SESSION['firstname'] . '!';
                     if($userData['admin'] == 1){
                         $_SESSION['admin'] = TRUE;
@@ -33,16 +33,14 @@ if(filter_var($_REQUEST['schoolnumber'], FILTER_VALIDATE_EMAIL)){
                 }
             } else {
                 // Incorrect email
-                echo 'Incorrect email';
+                echo 'Incorrect leerlingnummer';
             }
         }
         
         
     }
 }else{
-    // exit($_REQUEST['schoolnumber']." is geen geldig adress");
-    $_SESSION['loggedin'] = TRUE;
-    header("location: ../../index.php");
+    exit($_REQUEST['schoolnumber']." is geen geldig schoolnummer");
 }
 
 

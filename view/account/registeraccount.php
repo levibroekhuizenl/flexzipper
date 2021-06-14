@@ -36,7 +36,7 @@ if($password = $passwordcfrm){
 
 $user = new userHandler;
 
-$sql = "INSERT INTO users (schoolNumber, firstName, lastName, email, password) values(?,?,?,?,?)";
+$sql = "INSERT INTO users (schoolnumber, firstname, lastname, email, password) values(?,?,?,?,?)";
 
 $user->addUser($sql, $schoolnumber, $firstname, $lastname, $email, $pwhash);
 
