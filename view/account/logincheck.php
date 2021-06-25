@@ -24,7 +24,7 @@ if(filter_var($_REQUEST['schoolnumber'])){
                         $_SESSION['admin'] = TRUE;
                         header("location: ../../index.php");
                     }else{
-                        header("location: ../../index.php");
+                        header("location: ./portoform1.php");
                     }
                     
                 } else {
