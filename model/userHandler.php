@@ -3,7 +3,7 @@
 Class userHandler{
     function __construct(){
         $this->dbasename= "flexzipper";
-        $this->password= "";
+        $this->password= "h2017";
         $this->username= "root";
         $this->servername= "localhost";
         try{

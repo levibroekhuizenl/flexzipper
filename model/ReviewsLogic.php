@@ -10,7 +10,7 @@
 
         //methods
           public function __construct(){
-                $this->DataHandler = new DataHandler("localhost", "mysql" ,"flexzipper" ,"root" ,"");
+                $this->DataHandler = new DataHandler("localhost", "mysql" ,"flexzipper" ,"root" ,"h2017");
             }
 
         function createReview($review_id, $name , $desc, $stars) {

@@ -1,0 +1,61 @@
+        body {
+            background-color: #428EEA;
+            color: #ffffff;
+        }
+
+        .fa {
+            color: #ffd700;
+        }
+
+        input[type="submit"] {
+            background-color: #3572BB;
+            border: 0;
+            color: #ffffff;
+            width: 30%;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            color: #428EEA;
+        }
+
+        input[type="text"],
+        input[type="int"],
+        textarea {
+            background-color: #3572BB;
+            border: 0;
+            color: #ffffff;
+            width: 100%;
+            padding:10px;
+        }
+
+        ::placeholder {
+            color: #ffffff;
+        }
+
+        .btn {
+            color: #ffffff;
+            background-color: #3572BB;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            color: #428EEA;
+        }
+
+        .badge {
+            background-color: #3572BB;
+        }
+
+        select {
+            background-color: #3572BB;
+            color: #ffffff;
+        }
+
+        a {
+            color: #ffffff;
+          }
+
+          .no-underline {
+            text-decoration: none;
+          }

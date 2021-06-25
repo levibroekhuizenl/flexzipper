@@ -1,5 +1,5 @@
 :root {
-  --bg: #00B9FF;
+  --bg: #428EEA;
   --alinea-bg: #ffffff; 
 }
 
@@ -10,7 +10,7 @@
 body {
   font-family: verdana;
   background-color: var(--bg);
-  color: white;
+  color: #ffffff;
 }
 
 #loading{
@@ -19,8 +19,8 @@ body {
   left:0;
   right:0;
   bottom:0;
-  background-color: #00B9FF;
-  color: white;
+  background-color: #428EEA;
+  color: #ffffff;
   opacity: 1;
   transition: 0.5s;
   visibility: visible;
@@ -30,3 +30,63 @@ body {
   visibility: hidden;
 }
 
+nav ul li {
+  background-color: #3572BB;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  color: #ffffff;
+  background-color: #3572BB;
+  border: 0;
+  padding: 10px;
+}
+
+#bottom-center {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+  
+}
+
+a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+[type="search"] {
+  background-color: #3572BB !important;
+  border: 0 !important;
+  color: #ffffff !important;
+  padding: 10px !important;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+#center-stage {
+  margin-left: 160px !important;
+}
+
+@media screen and (max-width: 600px) {
+  #center-stage {
+    margin-left: 80px !important;
+  }
+}

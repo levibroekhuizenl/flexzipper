@@ -31,17 +31,19 @@ if(isset($_REQUEST['id'])){
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/account.css">
     <link rel="stylesheet" href="./fonts/remixicon.css">
+    <link rel="stylesheet" href="./assets/details.css">
     <title><?php echo $productArray[0]['service_name'];?></title>
+
 </head>
-<body class="bg-primary">
+<body >
 
     <section id="product">
-        <div class="bg-dark py-5">
+        <div class=" py-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-12 col-lg-5 me-lg-5">
 
-            <section id="login" class="bg-dark py-4">
+            <section id="login" class=" py-4">
                 <div class="container">
                     <div class="row">
                         <form action="logincheck.php" method="POST" class="">
@@ -97,8 +99,8 @@ if(isset($_REQUEST['id'])){
                     </div>
                     <div class="col-12 col-md-12 col-lg-5 text-white">
                         <h1 class="border-bottom pb-2 mb-2"><?php echo  $productArray[0]['service_name'];?></h1>
-                        <small class="badge bg-primary p-2"><?php echo  $productArray[0]['service_status'];?></small>
-                        <small class="badge bg-success p-2"><?php echo  $productArray[0]['service_genre'];?></small>
+                        <small class="badge bg-success p-2"><?php echo  $productArray[0]['service_status'];?></small>
+                        <small class="badge p-2"><?php echo  $productArray[0]['service_genre'];?></small>
                         
                         <div class="row">
                             <div class="col-6 col-md-6 col-lg-6">
@@ -154,7 +156,7 @@ if(isset($_REQUEST['id'])){
 
 <form action='../controller/reviewsController.php' method='post' id='theform' name='handleData'>
   <label for="fname">Naam</label><br>
-  <input type="text" id="fname" name="name" value="naam"><br>
+  <input type="text" id="fname" name="name" placeholder="Naam"><br>
   <label for="lname">Aantal sterren</label><br>
   <select id="reviews" name='stars'>
   <option value="1">1</option>
@@ -166,7 +168,7 @@ if(isset($_REQUEST['id'])){
   <label for="lname">Beschrijving</label><br>
   <input type='text' name='todo' value='create' hidden>
   <input type='int' name='review_id' value='<?php echo $id ?>' hidden>
-  <input type="text" id="lname" name="desc" value="Beschrijving"><br><br>
+  <input type="text" id="lname" name="desc" placeholder="Beschrijving"><br><br>
     <input type='submit'>
 </form> 
                     </div>
@@ -178,7 +180,7 @@ if(isset($_REQUEST['id'])){
 <div id='content'>
 </div>
 
-    <section id="footer">
+ <!--   <section id="footer">
         <div class="bg-primary py-4">
             <div class="container">
                 <div class="row">
@@ -188,7 +190,7 @@ if(isset($_REQUEST['id'])){
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>

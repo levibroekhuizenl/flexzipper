@@ -19,9 +19,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/style.css">
-    <title>Mijn Account</title>
+    <title>Inloggen</title>
 </head>
-<body class="bg-primary">
+<body>
 
         <div id="loading">
           <div class="row h-100">
@@ -35,52 +35,61 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
           </div>
         </div>
 
-    <section id="login" class="bg-primary py-5">
+    <section id="login" class="py-5">
         <div class="container">
             <div class="row">
                 <form action="logincheck.php" method="POST" class="">
                     <div class="row pb-5">
-                        <div class="col-12 col-lg-6 text-white mx-auto text-center">
-                            <h2>Inloggen</h2>
+                        <div class="col-12 col-lg-6  mx-auto text-center">
+                            <h2><b>Inloggen<b></h2>
                         </div>
                     </div> 
 
                     <div class="row pb-2">
-                        <div class="col-12 col-lg-6 mx-auto">
+                        <div class="col-12 col-lg-6 mx-auto center-block">
                             <div class="row">
-                                <div class="col-4 text-white">
-                                    <label for="school">leerlingnummer</label>
+                            <div class="col-1">
+                                     <!-- Blank space -->
                                 </div>
-                                <div class="col-7 col-md-6 col-lg-6">
-                                    <input class="w-100" type="number" placeholder="541987" name="schoolnumber" id="schoolnumber" autofocus required>
+                                <div class="col-10 text-white">
+                                    <input class="w-100" type="number" placeholder="Leerlingnummer" name="schoolnumber" id="schoolnumber" autofocus required>
+                                </div>
+
+                                <div class="col-1">
+                                    <!-- Blank space -->
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 col-lg-6 mx-auto">
+                    
                             <div class="row">
-                                <div class="col-4 text-white">
-                                    <label for="password">Wachtwoord:</label>
+                                <div class="col-1">
+                                     <!-- Blank space -->
                                 </div>
-                                <div class="col-7 col-md-6 col-lg-6">
-                                    <input class="w-100" type="password" placeholder="Wachtwoord" name="password" id="password" required>
-                                    <a href="./passwordrecovery.php">Wachtwoord vergeten?</a>
+                                <div class="col-10">
+                                    <input class="w-100 float-right" type="password" placeholder="Wachtwoord" name="password" id="password" required>
+                                    <a href="./passwordrecovery.php" class="no-underline">Wachtwoord vergeten?</a>
+                                </div>
+                                <div class="col-1">
+                                     <!-- Blank space -->
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        
 
                     <div class="row py-3">
                         <div class="col-12 col-lg-6 mx-auto">
                             <div class="row">
-                                <div class="col-4 text-white">
-                                    <label for="password">&nbsp;</label>
+                                <div class="col-1">
+                                     <!-- Blank space -->
                                 </div>
-                                <div class="col-7 col-md-6 col-lg-6">
-                                    <input type="submit" value="login" class="w-100 btn green py-1">
-                                    <a href="./register.php">Maak een account</a>
+                                <div class="col-8 text-white">
+                                    <label for="password" class="hidden">&nbsp;</label>
+                                    <input type="submit" value="Inloggen" class="w-100 btn blue py-1">
+                                    <a class="no-underline" href="./register.php">Maak een account aan</a>
+                                </div>
+                                <div class="col-3">
+                                    <!-- Blank space -->
                                 </div>
                             </div>
                         </div>

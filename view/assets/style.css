@@ -1,5 +1,5 @@
 :root {
-  --bg: #00B9FF;
+  --bg: #428EEA;  
   --alinea-bg: #ffffff; 
 }
 
@@ -10,7 +10,7 @@
 body {
   font-family: verdana;
   background-color: var(--bg);
-  color: white;
+  color: #ffffff;
 }
 
 .row::after {
@@ -20,12 +20,12 @@ body {
 }
 
 .checked {
-  color: orange;
+  color: #FFA500;
 }
 
 [class*="col-"] {
   float: left;
-  padding: 15px;
+  padding: 10px;
 }
 
 .col-1 {width: 8.33%;}
@@ -55,14 +55,14 @@ li {
 
 li a, .dropbtn {
   display: inline-block;
-  color: white;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #ff0000;
 }
 
 li.dropdown {
@@ -93,7 +93,7 @@ li.dropdown {
 }
 
 .blue {
-  background-color: #063E54;
+  background-color: #428EEA;
 }
 
 .center {
@@ -108,12 +108,15 @@ li.dropdown {
   text-align: right;
 }
 
-input[type=text], select, textarea {
+input[type=text],
+input[type=password],
+input[type=email],
+ select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   resize: vertical;
+  background-color:#3572BB;
+  color: #ffffff;
 }
 
 label {
@@ -122,18 +125,19 @@ label {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #428EEA;
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   float: right;
 }
 
+/* 
 input[type=submit]:hover {
   background-color: #45a049;
 }
+*/
 
 .container {
   border-radius: 5px;
@@ -173,16 +177,17 @@ input[type=submit]:hover {
 }
 h2 {
   grid-column: 1/3;
-  background: #3a3a3a;
-  color: white;
+  background: var(--blue);
+  color: #ffffff;
   margin: 0;
   font-size: 1.2em;
+  text-align: center !important;
 }
 
 #login h2 {
   grid-column: none;
   background: transparent;
-  color: white;
+  color: #ffffff;
   margin: 0;
   font-size: 1.2em;
 }
@@ -194,23 +199,27 @@ span {
   
 label {
   grid-column: 1/3;
-  color: white;
+  color: #ffffff;
   padding: 5px 10px 5px 10px;
   font-size: 1em;
   margin: 10px 10px 0 10px;
+  background-color: #428EEA;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="password"],
+input[type="number"],
 textarea {
   grid-column: 1/3;
   font-family: "Source Sans Pro", sans-serif;
-  border: 2px solid #627f09;
-  margin: 0 10px 0px 10px;
+  border: 2px solid #3572BB;
+  margin: 0 10px 10px 0px;
   font-weight: 400;
   font-size: 1em;
-  padding: 0.2em;
+  padding: 0.5em;
+  background-color: #3572BB;
 }
 
 textarea {
@@ -219,34 +228,33 @@ textarea {
 }
 
 input[type="submit"] {
-  background: #627f09;
-  color: white;
-  border: 0;
-  border-bottom: 3px solid #4d6507;
-  border-radius: 0.5em;
+  background: #3572BB;
+  color: #ffffff;
   font-size: 1.1em;
   padding: 5px 30px 5px 30px;
   justify-self: start;
   align-self: start;
-  margin: 0 10px 10px 10px;
+  margin: 0 0 10px 10px;
   grid-row: 11 / 12;
 }
-  /* &:hover,
+  /* 
+  &:hover,
   &:active {
     position: relative;
     top: 2px;
-  } */
+  } 
+  */
 
 p {
   grid-column: 1/3;
   background: #445706;
   margin: 0 10px 10px 10px;
   padding: 5px 10px 5px 10px;
-  color: white;
+  color: #ffffff;
   font-size: 0.85em;
 }
 a {
-  color: yellow;
+  color: #ffffff;
 }
 
 picture {
@@ -264,8 +272,8 @@ picture {
     gap: 10px;
   }
   h2 {
-    background: white;
     grid-column: 1 / 13;
+    text-align: center;
   }
   span {
     background: #3a3a3a;
@@ -286,11 +294,16 @@ picture {
   input[type="email"],
   input[type="tel"],
   input[type="submit"],
+  input[type="number"],
+  input[type="password"],
   textarea {
     grid-column: 5 / 13;
     margin: 0;
-    margin-right: 10px;
+    margin-right: 0px;
+    background-color: #3572BB;
   }
+
+  
 
   textarea {
     grid-row: 5 / 9;
@@ -322,8 +335,8 @@ picture {
   left:0;
   right:0;
   bottom:0;
-  background-color: #00B9FF;
-  color: white;
+  background-color: #428EEA; /* #00B9FF */
+  color: #ffffff;
   opacity: 1;
   transition: 0.5s;
   visibility: visible;
@@ -339,6 +352,10 @@ picture {
     width: 100%;
     margin-top: 0;
   }
+
+  h2 {
+    background-color:#428EEA;
+  }
 }
 
 table {
@@ -351,4 +368,25 @@ table {
 th, td {
   text-align: left;
   padding: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+[type="button"] {
+  background-color: #3572BB;
+  border: 0;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  margin: 30px;
 }

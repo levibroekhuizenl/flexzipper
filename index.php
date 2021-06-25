@@ -10,6 +10,7 @@
     });
   </script>
   <link rel='stylesheet' href='view/assets/index.css'>
+  <title>Flexzipper - Home</title>
 </head>
 <body>
   <?php include 'view/header.php' ?>
@@ -19,6 +20,35 @@
 
 <?php include 'view/loading.php'; ?>
 <div id='content'>
+  <div class="container">
+    <div class="row pb-2">
+      <div class="col-12 col-lg-6 mx-auto center-block">
+
+        <div class="col-3">
+        </div>
+
+        <div class="col-8 iframe-container">
+          <iframe width="620" height="415"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="col-1">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row pb-2">
+      <div class="col-12 col-lg-6 mx-auto center-block">
+        <div class="col-12">
+          <a id="center-stage" class="no-underline" href="./view/account/login.php">Klik hier om in te loggen.</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 </div>
   
 

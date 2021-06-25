@@ -3,7 +3,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,9 +12,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=createform', sendToContent);">
-               <a class="nav-link active" aria-current="page" href="#">Create</a></a>
+            <a class="nav-link active" aria-current="page" href="#">Create</a></a>
         </li>
-          <li type='button' name='todo' value='read' onClick="loadPage('controller/productsController.php?todo=read', sendToContent);">
+        <li type='button' name='todo' value='read' onClick="loadPage('controller/productsController.php?todo=read', sendToContent);">
             <a class="nav-link" href="#">Read</a>
         </li>
       </ul>

@@ -5,58 +5,81 @@
 
 <html>
 	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>Dienst Aanmaken</title>
 	</head>
 
 	<body>
-		<div class="row blue center">
-        <div class="col-9">
-        <h1 class='left'>Diensten</h1>
+		<div class="row pb-5 blue center">
+        <div class="col-12 col-lg-6 mx-auto text-center">
+        <h2><b>Dienst Aanmaken<b></h2>
     <form action='../controller/productsController.php' method='post' id='theform' name='handleData'>
         <div class="row">
-            <div class="col-3 col-s-12">
-                <label for="">Naam van dienst</label>
+            <div class="col-1 col-s-12">
+                
             </div>
-            <div class="col-9 col-s-12">
-                <input type="text" name='service_name' value='naam' required autofocus>
+            <div class="col-10 col-s-12">
+                <input type="text" name='service_name' placeholder="Naam van dienst" required autofocus>
+            </div>
+            <div class="col-1 col-s-12">
+                
             </div>
         </div>
 
         <div class="row">
-            <div class="col-3 col-s-12">
-                <label for="genre">Genre</label>
+            <div class="col-1 col-s-12">
+                <!-- <label for="genre">Genre</label> -->
             </div>
-            <div class="col-9 col-s-12">
+            <div class="col-10 col-s-12">
                 <select type="text" name="service_genre" required autofocus>
+                    <option value="Genre">-- Genre --</option>
                     <option value="Horeca">Horeca</option>
                     <option value="Autos">Autos</option>
                     <option value="Economie">Economie</option>
                     <option value="ICT">ICT</option>
                 </select>
             </div>
+            <div class="col-1 col-s-12">
+                
+            </div>
         </div>
         <div class="row">
-            <div class="col-3 col-s-12">
-                <label for="">Status</label>
+            <div class="col-1 col-s-12">
+                
             </div>
-            <div class="col-9 col-s-12">
+            <div class="col-10 col-s-12">
                 <select type="text" name="service_status" required autofocus>
+                    <option value="Status">-- Status --</option>
                     <option value="Beschikbaar">Beschikbaar</option>
                     <option value="In behandeling">In behandeling</option>
                     <option value="Gesloten">Gesloten</option>
                 </select>
             </div>
+            <div class="col-1 col-s-12">
+                
+            </div>
         </div>
         <div class="row">
-            <div class="col-3 col-s-12">
-                <label for="">Details</label>
+            <div class="col-1 col-s-12">
+                <!-- <label for="">Details</label> -->
             </div>
-            <div class="col-9 col-s-12">
-                <textarea id="mytextarea" name="service_details">service_details</textarea>
+            <div class="col-10 col-s-12">
+                <textarea id="mytextarea" name="service_details" placeholder="Details"></textarea>
+            </div>
+            <div class="col-1 col-s-12">
+                
             </div>
         </div>       
         <div class="row">
-            <div class="col-6 col-s-12">
-                <button id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=create', sendToContent);">Create</button>
+                <div class="col-12 col-s-12">
+                
+                </div>
+            <div class="col-8 col-s-12">
+                <button id='button' type='button' name='todo' value='create' onClick="loadPage('controller/productsController.php?todo=create', sendToContent);"><b>Create</b></button>
             </div>
             <div id='content'>
             </div>
