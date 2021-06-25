@@ -27,8 +27,8 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
           <div class="row h-100">
             <div class="container">
               <div class="row h-100 justify-content-center">
-                <div class="col-4 text-center my-auto">
-                  <img src="../../img/logo.png" height="400px" width="400px">
+                <div class="col-12 text-center my-auto">
+                  <img src="../../img/logo.png" height="50%" width="50%">
                 </div>
               </div>
             </div>
