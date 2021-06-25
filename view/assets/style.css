@@ -335,7 +335,7 @@ picture {
   left:0;
   right:0;
   bottom:0;
-  background-color: #428EEA; /* #00B9FF */
+  background-color: #00B9FF;
   color: #ffffff;
   opacity: 1;
   transition: 0.5s;
@@ -368,6 +368,8 @@ table {
 th, td {
   text-align: left;
   padding: 8px;
+  border: 3px solid #ffffff;
+  text-align: center;
 }
 
 .hidden {
